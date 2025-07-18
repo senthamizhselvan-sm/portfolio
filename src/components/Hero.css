@@ -1,0 +1,34 @@
+.hero {
+  background: url('https://www.pixelstalk.net/wp-content/uploads/2016/05/Amazing-HD-Black-Wallpapers.jpg') center center / cover no-repeat;
+  background-color: #000;
+  color: #fff;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.65); /* dark overlay */
+  padding: 20px 30px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.pronoun {
+  font-size: 0.85rem;
+  margin-left: 8px;
+  color: #bbb;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  margin: 3px 0;
+  line-height: 1.4;
+}
