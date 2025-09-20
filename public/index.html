@@ -3,19 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A personal portfolio website built with React" />
-    <meta name="author" content="Your Name" />
-    <meta name="keywords" content="React, Portfolio, Web Developer" />
-
-    <title>Your Name | Portfolio</title>
-
-    <!-- Optional: Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="S. Senthamizh Selvan - Software Engineer, AI Enthusiast & Full-Stack Developer specializing in MERN stack, Python, and LLMs. Chennai-based developer with 620+ LeetCode problems solved." />
+    <meta name="author" content="S. Senthamizh Selvan" />
+    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, Node.js, Python, AI, Machine Learning, LLM, Chennai Developer, Computer Science, MERN Stack, AWS, MongoDB" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio-zeta-opal-84.vercel.app/" />
+    <meta property="og:title" content="S. Senthamizh Selvan | Software Engineer & AI Enthusiast" />
+    <meta property="og:description" content="Passionate Software Engineer specializing in Full-Stack Development, AI/ML, and modern web technologies. Explore my projects, achievements, and professional journey." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Senthamizh Selvan Portfolio" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://portfolio-zeta-opal-84.vercel.app/" />
+    <meta property="twitter:title" content="S. Senthamizh Selvan | Software Engineer & AI Enthusiast" />
+    <meta property="twitter:description" content="Passionate Software Engineer specializing in Full-Stack Development, AI/ML, and modern web technologies." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="twitter:creator" content="@senthamizh_dev" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#667eea" />
+    <meta name="msapplication-TileColor" content="#667eea" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
+    
+    <!-- Page Title -->
+    <title>S. Senthamizh Selvan | Software Engineer & AI Enthusiast | Portfolio</title>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon and App Icons -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "S. Senthamizh Selvan",
+      "jobTitle": "Software Engineer",
+      "description": "Software Engineer, AI Enthusiast, and Full-Stack Developer specializing in MERN stack and Python",
+      "url": "https://portfolio-zeta-opal-84.vercel.app/",
+      "sameAs": [
+        "https://www.linkedin.com/in/senthamizhselvan",
+        "https://github.com/senthamizhselvan-s",
+        "https://leetcode.com/senthamizhselvan",
+        "https://codechef.com/users/senthamizh_s"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "India"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Chennai Institute Of Technology"
+      },
+      "knowsAbout": [
+        "Software Engineering",
+        "Full Stack Development",
+        "React.js",
+        "Node.js",
+        "Python",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "MongoDB",
+        "MySQL",
+        "AWS"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>This portfolio website requires JavaScript to display properly. Please enable JavaScript in your browser settings and refresh the page.</p>
+        <p>You can also visit my profiles directly:</p>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="https://www.linkedin.com/in/senthamizhselvan">LinkedIn</a></li>
+          <li><a href="https://github.com/senthamizhselvan-s">GitHub</a></li>
+        </ul>
+      </div>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>
