@@ -32,13 +32,8 @@ const Contact = () => {
   };
 
   const downloadResume = () => {
-    // In a real implementation, this would download an actual resume file
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // This would be a real PDF path
-    link.download = 'Senthamizh_Selvan_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open Google Drive link in new tab
+    window.open('https://drive.google.com/file/d/10MwUvYbViTINHnjhPZxfHV-RqEAMWOra/view?usp=sharing', '_blank');
   };
 
   const socialLinks = [
