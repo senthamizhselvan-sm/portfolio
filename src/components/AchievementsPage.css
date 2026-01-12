@@ -1,0 +1,483 @@
+/* Achievements Page Styling */
+.achievements-page {
+  background: #0a0e1e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.achievements-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.achievements-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.achievements-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2, #7B68EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.achievements-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Search and Filter Controls */
+.achievements-controls {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: rgba(139, 95, 191, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(139, 95, 191, 0.2);
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-tab {
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.filter-tab:hover {
+  background: rgba(139, 95, 191, 0.2);
+  border-color: rgba(139, 95, 191, 0.4);
+}
+
+.filter-tab.active {
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 95, 191, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(139, 95, 191, 0.2);
+}
+
+.achievement-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 95, 191, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.achievement-emoji {
+  font-size: 1.8rem;
+}
+
+.achievement-meta {
+  flex: 1;
+}
+
+.achievement-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.achievement-date {
+  color: #4A90E2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.achievement-org {
+  color: #8B5FBF;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.achievement-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-image img {
+  transform: scale(1.05);
+}
+
+.achievement-content {
+  text-align: left;
+}
+
+.achievement-description {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.achievement-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-link:hover {
+  color: #8B5FBF;
+  transform: translateX(3px);
+}
+
+/* Coding Profiles Section */
+.coding-section {
+  margin-top: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.coding-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.coding-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.coding-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 95, 191, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(139, 95, 191, 0.2);
+}
+
+.coding-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.platform-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.platform-emoji {
+  font-size: 1.5rem;
+}
+
+.platform-info {
+  flex: 1;
+}
+
+.platform-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.username {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.coding-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.profile-link:hover {
+  color: #8B5FBF;
+  transform: translateX(3px);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #888;
+}
+
+.no-results i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #b0b0b0;
+}
+
+.no-results p {
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .achievements-page {
+    padding: 4rem 0;
+  }
+  
+  .achievements-title {
+    font-size: 2.5rem;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .achievement-card {
+    padding: 1.5rem;
+  }
+  
+  .achievements-controls {
+    gap: 1.5rem;
+  }
+  
+  .filter-tabs {
+    gap: 0.8rem;
+  }
+  
+  .filter-tab {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .coding-profiles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .coding-card {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-title {
+    font-size: 2rem;
+  }
+  
+  .achievements-subtitle {
+    font-size: 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1rem;
+  }
+  
+  .achievement-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .achievement-icon {
+    align-self: center;
+  }
+  
+  .filter-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .filter-tab {
+    width: 100%;
+  }
+  
+  .coding-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .platform-icon {
+    align-self: center;
+  }
+}

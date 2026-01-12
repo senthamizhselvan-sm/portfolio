@@ -1,0 +1,248 @@
+/* Experience Page Styling */
+.experience-page {
+  background: #0a0e1e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2, #7B68EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.experience-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.experience-timeline {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
+  border-radius: 2px;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.experience-icon {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
+}
+
+.experience-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  flex: 1;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.experience-content:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 95, 191, 0.5);
+  transform: translateX(10px);
+  box-shadow: 0 15px 30px rgba(139, 95, 191, 0.2);
+}
+
+.experience-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.experience-title-section {
+  flex: 1;
+}
+
+.experience-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8B5FBF;
+  margin-bottom: 0;
+}
+
+.experience-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.experience-duration {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4A90E2;
+  margin-bottom: 0.3rem;
+}
+
+.experience-location {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin-bottom: 0;
+}
+
+.experience-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.experience-description li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #8B5FBF;
+  font-size: 0.7rem;
+  top: 0.3rem;
+}
+
+.experience-description li:hover {
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .experience-page {
+    padding: 4rem 0;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+  }
+  
+  .experience-timeline::before {
+    left: 20px;
+  }
+  
+  .experience-item {
+    gap: 1rem;
+  }
+  
+  .experience-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .experience-content {
+    padding: 1.5rem;
+  }
+  
+  .experience-header-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience-meta {
+    text-align: left;
+  }
+  
+  .experience-role {
+    font-size: 1.1rem;
+  }
+  
+  .experience-company {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 2rem;
+  }
+  
+  .experience-subtitle {
+    font-size: 1rem;
+  }
+  
+  .experience-timeline::before {
+    display: none;
+  }
+  
+  .experience-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .experience-icon {
+    align-self: center;
+  }
+  
+  .experience-content:hover {
+    transform: none;
+  }
+}

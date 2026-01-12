@@ -45,12 +45,15 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { href: '#about', text: 'About' },
-    { href: '#skills', text: 'Skills' },
+    { href: '#hero', text: 'About me' },
     { href: '#projects', text: 'Projects' },
-    { href: '#education', text: 'Education' },
+    { href: '#experience', text: 'Experience' },
+    { href: '#skills', text: 'Skills' },
     { href: '#achievements', text: 'Achievements' },
+    { href: '#education', text: 'Education' },
+    { href: '#cp-profiles', text: 'CP Profiles' },
     { href: '#certifications', text: 'Certifications' },
+    { href: '#resume', text: 'Resume' },
     { href: '#contact', text: 'Contact' }
   ];
 
@@ -58,7 +61,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-left">
-          <h1 className="logo">S. Senthamizh Selvan</h1>
+          
         </div>
         
         {/* Hamburger Menu Button - Only visible on mobile */}

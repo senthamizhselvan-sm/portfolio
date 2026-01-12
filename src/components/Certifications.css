@@ -1,0 +1,221 @@
+/* Certifications Page Styling */
+.certifications-page {
+  background: #0a0e1e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.certifications-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.certifications-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.certifications-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2, #7B68EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.certifications-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.certification-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8B5FBF, #4A90E2, #7B68EE);
+  border-radius: 25px 25px 0 0;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(139, 95, 191, 0.2);
+  border-color: rgba(139, 95, 191, 0.3);
+}
+
+.certification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.certification-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.certification-meta {
+  text-align: right;
+}
+
+.certification-provider {
+  font-size: 1rem;
+  color: #7B68EE;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.certification-year {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+.certification-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.certification-description {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.certification-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(139, 95, 191, 0.2);
+  border: 1px solid rgba(139, 95, 191, 0.3);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: #8B5FBF;
+  font-weight: 600;
+}
+
+.certification-badge::before {
+  content: '🏆';
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Provider specific colors */
+.certification-card[data-provider="AWS"] .certification-icon {
+  background: linear-gradient(45deg, #FF9900, #FFB84D);
+}
+
+.certification-card[data-provider="NPTEL"] .certification-icon {
+  background: linear-gradient(45deg, #FF6B6B, #EE5A52);
+}
+
+.certification-card[data-provider="LinkedIn"] .certification-icon {
+  background: linear-gradient(45deg, #0077B5, #005885);
+}
+
+.certification-card[data-provider="Cisco"] .certification-icon {
+  background: linear-gradient(45deg, #1BA0D7, #0F7BAE);
+}
+
+.certification-card[data-provider="MongoDB"] .certification-icon {
+  background: linear-gradient(45deg, #4DB33D, #3E8B2E);
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background: linear-gradient(45deg, #8B5FBF, #4A90E2, #7B68EE);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  50% {
+    background: linear-gradient(45deg, #7B68EE, #8B5FBF, #4A90E2);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certifications-title {
+    font-size: 2.5rem;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .certification-card {
+    padding: 2rem;
+  }
+  
+  .certification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .certification-meta {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-container {
+    padding: 0 1rem;
+  }
+  
+  .certification-card {
+    padding: 1.5rem;
+  }
+  
+  .certification-content h3 {
+    font-size: 1.3rem;
+  }
+}

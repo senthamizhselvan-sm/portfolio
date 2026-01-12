@@ -2,37 +2,36 @@ html {
   scroll-behavior: smooth;
 }
 
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #0a0e1e;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-attachment: fixed;
-  color: #333;
-  padding-top: 80px;
+  background: #0a0e1e;
+  color: #ffffff;
+  padding-top: 60px;
   line-height: 1.6;
-}
-#achievements h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 
 section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 20px auto;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 60px 0;
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
 }
 
 h2 {
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #ffffff;
   font-size: 2.5em;
   font-weight: 700;
   text-align: center;
@@ -68,18 +67,19 @@ footer {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(44, 62, 80, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 14, 30, 0.95);
+  backdrop-filter: blur(20px);
   color: #fff;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 15px 25px;
+  padding: 10px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +88,7 @@ footer {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,25 +97,27 @@ footer {
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   align-items: center;
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 25px;
   transition: all 0.3s ease;
   white-space: nowrap;
+  opacity: 0.9;
 }
 
 .nav-link:hover {
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.4);
+  opacity: 1;
 }
 
 /* Hamburger Menu */
@@ -234,12 +236,17 @@ footer {
   .nav-links-mobile .nav-link:nth-child(5) { animation-delay: 0.5s; }
   .nav-links-mobile .nav-link:nth-child(6) { animation-delay: 0.6s; }
   .nav-links-mobile .nav-link:nth-child(7) { animation-delay: 0.7s; }
+  .nav-links-mobile .nav-link:nth-child(8) { animation-delay: 0.8s; }
+  .nav-links-mobile .nav-link:nth-child(9) { animation-delay: 0.9s; }
+  .nav-links-mobile .nav-link:nth-child(10) { animation-delay: 1.0s; }
+  .nav-links-mobile .nav-link:nth-child(11) { animation-delay: 1.1s; }
+  .nav-links-mobile .nav-link:nth-child(12) { animation-delay: 1.2s; }
 
   .nav-link:hover {
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #8B5FBF, #4A90E2);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(0) scale(1.05);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 25px rgba(139, 95, 191, 0.4);
   }
 
   section {
@@ -368,12 +375,14 @@ footer {
   
   section {
     page-break-inside: avoid;
-    background: white !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     box-shadow: none !important;
+    color: #333 !important;
   }
   
   body {
-    background: white !important;
+    background: #f5f5f5 !important;
+    color: #333 !important;
   }
 }
 
@@ -407,10 +416,12 @@ footer {
 }
 
 .skill-item {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 10px 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #certifications h2 {
   margin-bottom: 20px;
@@ -433,14 +444,16 @@ footer {
 }
 
 .skill-item {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 10px 16px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   font-size: 0.95em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #education a {
-  color: #0066cc;
+  color: #8B5FBF;
   text-decoration: none;
 }
 
@@ -448,7 +461,7 @@ footer {
   text-decoration: underline;
 }
 #contact a {
-  color: #0066cc;
+  color: #8B5FBF;
   text-decoration: none;
 }
 
