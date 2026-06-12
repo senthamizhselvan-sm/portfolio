@@ -40,55 +40,93 @@
   line-height: 1.6;
 }
 
-/* Platform Cards */
+/* Platform Cards - Redesigned for Glassmorphism & Accent Glows */
 .platforms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
   margin-bottom: 5rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
 }
 
 .platform-card {
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .platform-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--platform-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(var(--platform-color), 0.15);
 }
 
 .platform-header {
   padding: 2.5rem 2rem 1.5rem;
   text-align: center;
   position: relative;
-  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.platform-logo-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 40px;
+  background: var(--platform-color);
+  filter: blur(40px);
+  opacity: 0.15;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.platform-card:hover .platform-logo-glow {
+  opacity: 0.3;
 }
 
 .platform-logo {
   position: relative;
   z-index: 2;
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.2rem;
   backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.platform-card:hover .platform-logo {
+  border-color: var(--platform-color);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(var(--platform-color), 0.3);
+  transform: rotate(5deg) scale(1.05);
 }
 
 .platform-icon {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
+  font-size: 2.2rem;
+  color: var(--platform-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .platform-name {
@@ -97,68 +135,101 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .platform-username {
   position: relative;
   z-index: 2;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
+  font-family: monospace;
 }
 
 .platform-content {
-  padding: 1rem 2rem 1.5rem;
-  background: rgba(15, 20, 35, 0.9);
-  color: white;
+  padding: 2rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .rank-section {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .user-rank {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.3rem;
+  color: var(--platform-color);
+  margin-bottom: 0.4rem;
 }
 
 .global-rank {
-  font-size: 0.85rem;
-  color: #b0b0b0;
-  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.star {
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.star.filled {
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.star.empty {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+/* Stats Grid inside Profile Cards */
 .stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  margin-bottom: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 .stat-item {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem 0.8rem;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--platform-color);
   transform: translateY(-2px);
 }
 
 .stat-label {
   display: block;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
   margin-bottom: 0.5rem;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .stat-value {
@@ -168,79 +239,31 @@
   font-weight: 700;
 }
 
-.star {
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.star.filled {
-  filter: hue-rotate(45deg) brightness(1.2);
-}
-
-.star.empty {
-  opacity: 0.3;
-  filter: grayscale(100%);
-}
-
-/* Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.stat-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(139, 95, 191, 0.4);
-}
-
-.stat-label {
-  display: block;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.4rem;
-  font-weight: 500;
-}
-
-.stat-value {
-  display: block;
-  font-size: 1rem;
-  color: white;
-  font-weight: 700;
-}
-
 /* View Profile Button */
 .view-profile-btn {
   width: 100%;
-  padding: 10px 0;
-  background: linear-gradient(45deg, #8B5FBF, #4A90E2);
-  border: none;
-  border-radius: 10px;
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .view-profile-btn:hover {
+  background: var(--platform-color);
+  color: #0a0e1e;
+  border-color: var(--platform-color);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
-  background: linear-gradient(45deg, #7B4FAF, #3A80D2);
-  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
 
@@ -403,8 +426,9 @@
   }
   
   .platform-card {
+    width: 88%;
+    max-width: 350px;
     margin: 0 auto;
-    max-width: 400px;
   }
   
   .stats-grid {

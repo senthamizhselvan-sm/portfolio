@@ -10,6 +10,7 @@ import EducationPage from './components/EducationPage';
 import CPProfilesPage from './components/CPProfilesPage';
 import Certifications from './components/Certifications';
 import ResumePage from './components/ResumePage';
+import DeveloperDashboard from './components/DeveloperDashboard';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -48,6 +49,8 @@ function App() {
         return <Certifications />;
       case 'resume':
         return <ResumePage />;
+      case 'dashboard':
+        return <DeveloperDashboard />;
       default:
         return <Hero />;
     }

@@ -1,0 +1,575 @@
+/* Developer Dashboard Styling */
+
+.developer-dashboard {
+  background: #0a0e1e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 6rem 0 4rem;
+  width: 100%;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.dashboard-header-section {
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+}
+
+/* 4-Card Analytics Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Glassmorphic Analytics Card */
+.analytics-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.analytics-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(139, 95, 191, 0.4);
+  box-shadow: 0 10px 30px rgba(139, 95, 191, 0.15);
+}
+
+/* Card Header styles */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.platform-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.leetcode-logo-wrapper, 
+.codeforces-logo-wrapper,
+.codechef-logo-wrapper {
+  background: rgba(139, 95, 191, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #8B5FBF;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.codeforces-logo-wrapper {
+  background: rgba(74, 144, 226, 0.15);
+  color: #4A90E2;
+}
+
+.platform-title h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  color: #ffffff;
+}
+
+.platform-username {
+  font-size: 0.8rem;
+  color: #8892b0;
+  margin: 0;
+}
+
+.platform-brand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0.15;
+  color: #ffffff;
+}
+
+/* Card Content metrics styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 0.5rem;
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metric-label {
+  color: #8892b0;
+}
+
+.metric-value {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.easy-text { color: #10B981; }
+.medium-text { color: #F59E0B; }
+.hard-text { color: #EF4444; }
+.rank-text { color: #8B5FBF; }
+
+.status-badge,
+.rank-badge,
+.placeholder-tag,
+.star-badge {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.rank-badge {
+  background: rgba(74, 144, 226, 0.1);
+  color: #4A90E2;
+}
+
+.rank-badge.max {
+  background: rgba(139, 95, 191, 0.1);
+  color: #8B5FBF;
+}
+
+.placeholder-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+}
+
+.star-badge {
+  background: rgba(255, 215, 0, 0.1);
+  color: #FFD700;
+}
+
+.card-link-footer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4A90E2;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  transition: gap 0.2s ease;
+  width: fit-content;
+}
+
+.card-link-footer:hover {
+  color: #8B5FBF;
+  gap: 0.7rem;
+}
+
+/* Error Card styles */
+.analytics-card.error {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.error-wrap {
+  text-align: center;
+  margin: auto;
+}
+
+.error-icon {
+  font-size: 2.2rem;
+  color: #EF4444;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.error-wrap h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.error-wrap p {
+  font-size: 0.8rem;
+  color: #8892b0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Dashboard Bottom Layout: Repos, Activity Timeline */
+.dashboard-bottom-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ffffff;
+}
+
+/* Live Repos List Grid */
+.repos-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.repo-card-modern {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.repo-card-modern:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 95, 191, 0.3);
+}
+
+.repo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.repo-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repo-lang-badge {
+  background: rgba(74, 144, 226, 0.15);
+  color: #4A90E2;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.repo-desc {
+  font-size: 0.85rem;
+  color: #8892b0;
+  line-height: 1.5;
+  margin: 0 0 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-stats-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.repo-stats-left {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #8892b0;
+}
+
+.repo-stats-left i {
+  margin-right: 2px;
+}
+
+.text-gold { color: #FFD700; }
+.text-blue { color: #4A90E2; }
+
+.repo-visit-btn {
+  font-size: 0.8rem;
+  color: #8B5FBF;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.repo-visit-btn:hover {
+  text-decoration: underline;
+  color: #4A90E2;
+}
+
+/* Activity Timeline styles */
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
+  padding-left: 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-card-item {
+  position: relative;
+}
+
+.timeline-node-accent {
+  position: absolute;
+  left: calc(-1.5rem - 6px);
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: #8B5FBF;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #8B5FBF;
+}
+
+.timeline-card-content {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+}
+
+.timeline-year-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4A90E2;
+  text-transform: uppercase;
+}
+
+.timeline-title-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0.2rem 0;
+}
+
+.timeline-desc-text {
+  font-size: 0.8rem;
+  color: #8892b0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Coding Profile Hub Quick Links */
+.section-heading-small {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.dashboard-profile-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.profile-hub-link {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.profile-hub-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.profile-hub-link.leetcode:hover { border-color: #FFA116; color: #FFA116; }
+.profile-hub-link.codeforces:hover { border-color: #3B82F6; color: #3B82F6; }
+.profile-hub-link.codechef:hover { border-color: #5B4638; color: #5B4638; }
+.profile-hub-link.github:hover { border-color: #ffffff; }
+
+/* Shimmer Loading Skeleton animations */
+.skeleton .shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: loadingShimmer 1.5s infinite;
+}
+
+@keyframes loadingShimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+.card-header-skeleton {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-skeleton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.header-text-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.line-short {
+  height: 12px;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.line-long {
+  height: 10px;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.card-stats-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-row-skeleton {
+  height: 14px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.repos-loading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.repo-card.skeleton {
+  height: 170px;
+  border-radius: 16px;
+}
+
+/* Fade In animations */
+.fade-in {
+  animation: dashboardFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes dashboardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness media queries */
+@media screen and (max-width: 1200px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dashboard-bottom-section {
+    grid-template-columns: 1fr; /* Stack repositories and timeline vertically */
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .analytics-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .repos-list-grid {
+    grid-template-columns: 1fr; /* 1 column repositories on mobile */
+  }
+
+  .dashboard-title {
+    font-size: 2.2rem;
+  }
+
+  .dashboard-container {
+    padding: 0 1rem;
+  }
+}

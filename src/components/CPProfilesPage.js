@@ -1,63 +1,69 @@
 import React from 'react';
+import useLeetcodeStats from '../hooks/useLeetcodeStats';
+import useCodeforcesStats from '../hooks/useCodeforcesStats';
 import './CPProfilesPage.css';
 
 const CPProfilesPage = () => {
+  const { stats: leetcode, loading: leetcodeLoading } = useLeetcodeStats();
+  const { stats: codeforces, loading: codeforcesLoading } = useCodeforcesStats();
+
   const profiles = [
     {
       id: 1,
       platform: "LeetCode",
-      username: "@senthamizh",
+      username: "senthamizhselvan-sm_cse-N",
       rank: "Expert",
-      globalRank: "Top 17.51% Globally",
+      globalRank: leetcode ? `Ranked #${leetcode.ranking.toLocaleString()} Globally` : "Top 17.51% Globally",
       rating: 4,
       maxStars: 5,
-      problemsSolved: "800+",
+      problemsSolved: leetcode ? `${leetcode.totalSolved}+` : "800+",
       maxRating: "1740",
-      badges: "8",
-      dailyStreak: "140+ days",
+      badges: leetcode ? `${leetcode.totalSolved > 0 ? "8 Badges" : ""}` : "8 Badges",
+      dailyStreak: "300+ days",
       contestRank: null,
       profileLink: "https://leetcode.com/senthamizhselvan-sm_cse-N",
-      bgColor: "linear-gradient(135deg, #FFA116, #FF8C00)",
-      icon: "</>"
+      color: "#FFA116",
+      icon: "fas fa-code"
     },
     {
       id: 2,
       platform: "CodeChef",
-      username: "@selva_cr_007",
-      rank: "One Stars (Div 4)",
-      globalRank: "Best Rank 1641",
-      rating: 1,
+      username: "selva_cr_007",
+      rank: "Two Stars (Div 3)",
+      globalRank: "Rating: 1419 | Ranked #40,298 Globally",
+      rating: 2,
       maxStars: 5,
       problemsSolved: "400+",
-      maxRating: "1123",
-      badges: null,
+      maxRating: "1422",
+      badges: "1 Skill Test",
       dailyStreak: null,
       contestRank: "1641",
+      countryRank: "37,708",
       profileLink: "https://codechef.com/users/selva_cr_007",
-      bgColor: "linear-gradient(135deg, #D32F2F, #B71C1C)",
-      icon: "</>"
+      color: "#D32F2F",
+      icon: "fas fa-utensils"
     },
     {
       id: 3,
       platform: "Codeforces",
-      username: "@senthamizhselvan.s",
-      rank: "Pupil (Div 3)",
-      globalRank: "Best Contest Rank 8031",
+      username: "senthamizhselvan.s",
+      rank: codeforces ? codeforces.rank : "Pupil (Div 3)",
+      globalRank: codeforces ? `Current Rating ${codeforces.rating} / Max Rating ${codeforces.maxRating}` : "Best Contest Rank 8031",
       rating: 1,
       maxStars: 5,
       problemsSolved: "Multiple Problems",
-      maxRating: "1000",
+      maxRating: codeforces ? codeforces.maxRating.toString() : "1000",
       badges: null,
       dailyStreak: null,
-      contestRank: "8031",
+      contestRank: codeforces ? codeforces.rating.toString() : "8031",
       profileLink: "https://codeforces.com/profile/senthamizhselvan.s",
-      bgColor: "linear-gradient(135deg, #4F46E5, #3B82F6)",
-      icon: "</>"
+      color: "#3B82F6",
+      icon: "fas fa-chart-line"
     },
     {
       id: 4,
       platform: "SkillRack",
-      username: "@senthamizhselvan s",
+      username: "senthamizhselvan s",
       rank: "Active Coder",
       globalRank: "Ranked 74000 globally",
       rating: 2,
@@ -68,16 +74,17 @@ const CPProfilesPage = () => {
       dailyStreak: null,
       contestRank: "74000",
       profileLink: "#",
-      bgColor: "linear-gradient(135deg, #FF6B6B, #EE5A52)",
-      icon: "</>"
+      color: "#FF6B6B",
+      icon: "fas fa-medal"
     }
   ];
 
+  const totalSolvedCount = (leetcode ? leetcode.totalSolved : 800) + 400 + 500;
 
   const journeyStats = [
     {
       icon: "fas fa-code",
-      number: "1700+",
+      number: `${totalSolvedCount}+`,
       label: "Total Number of Problems Solved",
       color: "#8B5FBF"
     },
@@ -125,10 +132,13 @@ const CPProfilesPage = () => {
         {/* Platform Cards */}
         <div className="platforms-grid">
           {profiles.map((profile) => (
-            <div key={profile.id} className="platform-card">
-              <div className="platform-header" style={{ background: profile.bgColor }}>
+            <div key={profile.id} className="platform-card" style={{ '--platform-color': profile.color }}>
+              <div className="platform-header">
+                <div className="platform-logo-glow"></div>
                 <div className="platform-logo">
-                  <span className="platform-icon">{profile.icon}</span>
+                  <span className="platform-icon">
+                    <i className={profile.icon}></i>
+                  </span>
                 </div>
                 <h2 className="platform-name">{profile.platform}</h2>
                 <p className="platform-username">@{profile.username}</p>
@@ -156,7 +166,7 @@ const CPProfilesPage = () => {
                     <div className="stat-item">
                       <span className="stat-label">Badges</span>
                       <span className="stat-value">
-                        <i className="fas fa-medal" style={{ color: '#FFA116', marginRight: '5px' }}></i>
+                        <i className="fas fa-medal" style={{ color: profile.color, marginRight: '5px' }}></i>
                         {profile.badges}
                       </span>
                     </div>
@@ -179,6 +189,15 @@ const CPProfilesPage = () => {
                       </span>
                     </div>
                   )}
+                  {profile.countryRank && (
+                    <div className="stat-item">
+                      <span className="stat-label">Country Rank</span>
+                      <span className="stat-value">
+                        <i className="fas fa-flag" style={{ color: profile.color, marginRight: '5px' }}></i>
+                        #{profile.countryRank}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <a 
@@ -187,7 +206,7 @@ const CPProfilesPage = () => {
                   rel="noopener noreferrer"
                   className="view-profile-btn"
                 >
-                  View Profile
+                  View Profile <i className="fas fa-arrow-right" style={{ marginLeft: '5px' }}></i>
                 </a>
               </div>
             </div>

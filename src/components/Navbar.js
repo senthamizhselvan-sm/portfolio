@@ -7,8 +7,8 @@ const Navbar = () => {
   // Check screen size
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) {
+      setIsMobile(window.innerWidth <= 1200);
+      if (window.innerWidth > 1200) {
         setIsMenuOpen(false); // Close menu when switching to desktop
       }
     };
@@ -53,14 +53,17 @@ const Navbar = () => {
     { href: '#education', text: 'Education' },
     { href: '#cp-profiles', text: 'CP Profiles' },
     { href: '#certifications', text: 'Certifications' },
-    { href: '#resume', text: 'Resume' }
+    { href: '#resume', text: 'Resume' },
+    { href: '#dashboard', text: 'Dashboard' }
   ];
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-left">
-          
+          <a href="#hero" className="logo-link">
+            <img src="/images/site logo.png" alt="Logo" className="nav-logo-img" />
+          </a>
         </div>
         
         {/* Hamburger Menu Button - Only visible on mobile */}

@@ -10,6 +10,7 @@ const CommandPalette = ({ isOpen, onClose, onToggleRecruiter, isRecruiterMode })
   const commands = [
     { name: 'View Projects', desc: 'Go to projects showcase', action: () => { window.location.hash = '#projects'; onClose(); } },
     { name: 'Open Resume', desc: 'View downloadable developer resume', action: () => { window.location.hash = '#resume'; onClose(); } },
+    { name: 'Go to Dashboard', desc: 'View developer analytics and stats dashboard', action: () => { window.location.hash = '#dashboard'; onClose(); } },
     { name: 'Go to Experience', desc: 'View professional work history', action: () => { window.location.hash = '#experience'; onClose(); } },
     { name: 'Go to Skills', desc: 'View capability metrics & developer tools', action: () => { window.location.hash = '#skills'; onClose(); } },
     { name: 'Go to Achievements', desc: 'View competitive coding & contests', action: () => { window.location.hash = '#achievements'; onClose(); } },
