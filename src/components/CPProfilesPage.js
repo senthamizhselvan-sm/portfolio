@@ -4,8 +4,8 @@ import useCodeforcesStats from '../hooks/useCodeforcesStats';
 import './CPProfilesPage.css';
 
 const CPProfilesPage = () => {
-  const { stats: leetcode, loading: leetcodeLoading } = useLeetcodeStats();
-  const { stats: codeforces, loading: codeforcesLoading } = useCodeforcesStats();
+  const { stats: leetcode } = useLeetcodeStats();
+  const { stats: codeforces } = useCodeforcesStats();
 
   const profiles = [
     {
