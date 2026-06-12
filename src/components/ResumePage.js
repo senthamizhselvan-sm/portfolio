@@ -128,7 +128,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Personal Information</h2>
-              <div className="section-icon">👤</div>
+              <div className="section-icon"><i className="fas fa-user"></i></div>
             </div>
             <div className="personal-info">
               <h3 className="name">{personalInfo.name}</h3>
@@ -157,7 +157,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Education</h2>
-              <div className="section-icon">🎓</div>
+              <div className="section-icon"><i className="fas fa-graduation-cap"></i></div>
             </div>
             <div className="education-card">
               <h3>{education.degree}</h3>
@@ -173,7 +173,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Experience</h2>
-              <div className="section-icon">💼</div>
+              <div className="section-icon"><i className="fas fa-briefcase"></i></div>
             </div>
             <div className="timeline">
               {experiences.map((exp, index) => (
@@ -193,7 +193,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Projects</h2>
-              <div className="section-icon">🚀</div>
+              <div className="section-icon"><i className="fas fa-rocket"></i></div>
             </div>
             <div className="projects-grid">
               {projects.map((project, index) => (
@@ -210,7 +210,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Technical Skills</h2>
-              <div className="section-icon">⚡</div>
+              <div className="section-icon"><i className="fas fa-bolt"></i></div>
             </div>
             <div className="skills-grid">
               {skills.map((skillGroup, index) => (
@@ -230,7 +230,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Competitive Programming</h2>
-              <div className="section-icon">🏆</div>
+              <div className="section-icon"><i className="fas fa-trophy"></i></div>
             </div>
             <div className="cp-list">
               {competitiveProgramming.map((item, index) => (
@@ -246,7 +246,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Certifications</h2>
-              <div className="section-icon">📜</div>
+              <div className="section-icon"><i className="fas fa-certificate"></i></div>
             </div>
             <div className="certifications-list">
               {certifications.map((cert, index) => (
@@ -261,7 +261,7 @@ const ResumePage = () => {
           <section className="resume-section">
             <div className="section-header">
               <h2 className="section-title">Achievements</h2>
-              <div className="section-icon">🌟</div>
+              <div className="section-icon"><i className="fas fa-star"></i></div>
             </div>
             <div className="achievements-list">
               {achievements.map((achievement, index) => (
@@ -276,7 +276,7 @@ const ResumePage = () => {
         {/* Download Button */}
         <div className="resume-actions">
           <button className="download-btn">
-            <span>📄</span>
+            <i className="fas fa-file-pdf" style={{ marginRight: '8px' }}></i>
             Download PDF Resume
           </button>
         </div>

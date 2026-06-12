@@ -18,7 +18,7 @@ const EducationPage = () => {
       description: "Pursuing undergraduate degree in Computer Science and Engineering with focus on software development, algorithms, data structures, and modern web technologies. Actively involved in practical projects and internships.",
       image: "/images/chennai-institute.jpg",
       category: "Degree",
-      icon: "🎓",
+      icon: "fas fa-graduation-cap",
       highlights: [
         "Strong foundation in Computer Science fundamentals",
         "Hands-on experience with multiple programming languages",
@@ -28,24 +28,16 @@ const EducationPage = () => {
         "Leadership roles in technical events and student organizations"
       ],
       subjects: [
-        "Data Structures and Algorithms",
-        "Object-Oriented Programming",
-        "Database Management Systems",
-        "Computer Networks",
-        "Operating Systems",
-        "Software Engineering",
-        "Machine Learning",
-        "Web Development",
-        "Computer Architecture",
-        "Artificial Intelligence"
-      ],
-      achievements: [
-        "Maintained consistent CGPA of 8.5/10 throughout the program",
-        "Won 3rd prize in Microsoft Innovation Challenge 2024",
-        "Completed multiple industry internships",
-        "Built 6+ major projects showcasing technical skills",
-        "Active contributor to open-source projects",
-        "Mentored junior students in programming and career guidance"
+        { name: "Data Structures & Algorithms", icon: "fas fa-sitemap", category: "DSA" },
+        { name: "Object-Oriented Programming", icon: "fas fa-cubes", category: "Paradigms" },
+        { name: "Database Management Systems", icon: "fas fa-database", category: "Data" },
+        { name: "Computer Networks", icon: "fas fa-network-wired", category: "Systems" },
+        { name: "Operating Systems", icon: "fas fa-terminal", category: "Systems" },
+        { name: "Software Engineering", icon: "fas fa-project-diagram", category: "Development" },
+        { name: "Machine Learning", icon: "fas fa-brain", category: "AI" },
+        { name: "Web Development", icon: "fas fa-laptop-code", category: "Development" },
+        { name: "Computer Architecture", icon: "fas fa-microchip", category: "Systems" },
+        { name: "Artificial Intelligence", icon: "fas fa-robot", category: "AI" }
       ]
     }
   ];
@@ -59,7 +51,7 @@ const EducationPage = () => {
       description: "Comprehensive training in Java, Spring Boot, and full-stack development methodologies",
       image: "/images/aicte-cert.jpg",
       category: "Professional",
-      icon: "☕",
+      icon: "fab fa-java",
       skills: ["Java", "Spring Boot", "RESTful APIs", "Database Integration"]
     },
     {
@@ -70,7 +62,7 @@ const EducationPage = () => {
       description: "Advanced frontend development with Django, Bootstrap, and modern UI/UX practices",
       image: "/images/betshoow-cert.jpg",
       category: "Professional",
-      icon: "🎨",
+      icon: "fas fa-paint-brush",
       skills: ["Django", "Bootstrap", "UI/UX", "Responsive Design"]
     },
   ];
@@ -82,7 +74,7 @@ const EducationPage = () => {
       platform: "Self-Learning + Practice",
       description: "Comprehensive study of DSA concepts with 800+ LeetCode problems solved",
       category: "Technical",
-      icon: "📊"
+      icon: "fas fa-chart-bar"
     },
     {
       id: 2,
@@ -90,7 +82,7 @@ const EducationPage = () => {
       platform: "Industry Projects",
       description: "Hands-on experience building complete web applications using MERN stack",
       category: "Development",
-      icon: "🌐"
+      icon: "fas fa-globe"
     },
     {
       id: 3,
@@ -98,7 +90,7 @@ const EducationPage = () => {
       platform: "Azure + AWS",
       description: "Experience with cloud deployment, Docker, and modern DevOps practices",
       category: "Cloud",
-      icon: "☁️"
+      icon: "fas fa-cloud"
     }
   ];
 
@@ -177,7 +169,7 @@ const EducationPage = () => {
                 <div key={edu.id} className="education-card main-degree">
                   <div className="education-header-card">
                     <div className="education-icon">
-                      <span className="education-emoji">{edu.icon}</span>
+                      <i className={`${edu.icon} education-fa-icon`} style={{ fontSize: '2rem', color: '#8B5FBF' }}></i>
                     </div>
                     <div className="education-meta">
                       <h3 className="education-degree">{edu.degree}</h3>
@@ -202,22 +194,21 @@ const EducationPage = () => {
                         </ul>
                       </div>
                       
-                      <div className="detail-section">
-                        <h5>Core Subjects</h5>
-                        <div className="subjects-grid">
+                      <div className="detail-section core-concepts-section">
+                        <h5>Core Concepts</h5>
+                        <div className="concepts-grid-modern">
                           {edu.subjects.map((subject, index) => (
-                            <span key={index} className="subject-tag">{subject}</span>
+                            <div key={index} className={`concept-card-modern ${subject.category.toLowerCase()}`}>
+                              <div className="concept-icon-wrap">
+                                <i className={subject.icon}></i>
+                              </div>
+                              <div className="concept-info">
+                                <span className="concept-tag-category">{subject.category}</span>
+                                <h4 className="concept-name">{subject.name}</h4>
+                              </div>
+                            </div>
                           ))}
                         </div>
-                      </div>
-                      
-                      <div className="detail-section">
-                        <h5>Academic Achievements</h5>
-                        <ul className="achievements-list">
-                          {edu.achievements.map((achievement, index) => (
-                            <li key={index}>{achievement}</li>
-                          ))}
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -238,7 +229,7 @@ const EducationPage = () => {
                 <div key={cert.id} className="certification-card">
                   <div className="cert-header">
                     <div className="cert-icon">
-                      <span className="cert-emoji">{cert.icon}</span>
+                      <i className={`${cert.icon} cert-fa-icon`} style={{ fontSize: '1.8rem', color: '#8B5FBF' }}></i>
                     </div>
                     <div className="cert-info">
                       <h3 className="cert-title">{cert.title}</h3>
@@ -271,7 +262,7 @@ const EducationPage = () => {
               {filteredCourses.map((course) => (
                 <div key={course.id} className="course-card">
                   <div className="course-icon">
-                    <span className="course-emoji">{course.icon}</span>
+                    <i className={`${course.icon} course-fa-icon`} style={{ fontSize: '1.8rem', color: '#8B5FBF' }}></i>
                   </div>
                   <div className="course-content">
                     <h3 className="course-title">{course.title}</h3>

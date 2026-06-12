@@ -53,8 +53,7 @@ const Navbar = () => {
     { href: '#education', text: 'Education' },
     { href: '#cp-profiles', text: 'CP Profiles' },
     { href: '#certifications', text: 'Certifications' },
-    { href: '#resume', text: 'Resume' },
-    { href: '#contact', text: 'Contact' }
+    { href: '#resume', text: 'Resume' }
   ];
 
   return (

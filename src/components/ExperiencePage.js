@@ -15,7 +15,7 @@ const ExperiencePage = () => {
         "Worked on modern web development practices and user interface optimization",
         "Gained practical experience in full-stack development workflows and project management"
       ],
-      icon: "💻"
+      icon: "fas fa-laptop-code"
     },
     {
       role: "Java Full Stack Intern",
@@ -29,7 +29,7 @@ const ExperiencePage = () => {
         "Developed enterprise-level applications using Spring Boot and modern Java technologies",
         "Participated in agile development processes and code review sessions"
       ],
-      icon: "☕"
+      icon: "fab fa-java"
     }
   ];
 
@@ -50,7 +50,7 @@ const ExperiencePage = () => {
           {experiences.map((experience, index) => (
             <div key={index} className="experience-item">
               <div className="experience-icon">
-                <span>{experience.icon}</span>
+                <i className={experience.icon}></i>
               </div>
               
               <div className="experience-content">

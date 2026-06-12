@@ -76,19 +76,19 @@ const CPProfilesPage = () => {
 
   const journeyStats = [
     {
-      icon: "</> ",
+      icon: "fas fa-code",
       number: "1700+",
       label: "Total Number of Problems Solved",
       color: "#8B5FBF"
     },
     {
-      icon: "⚙️",
+      icon: "fas fa-cog",
       number: "300+",
       label: "Active Number of Days (LeetCode)",
       color: "#4A90E2"
     },
     {
-      icon: "🏆",
+      icon: "fas fa-trophy",
       number: "1740",
       label: "Highest Rating (LeetCode)",
       color: "#7B68EE"
@@ -103,7 +103,7 @@ const CPProfilesPage = () => {
           key={i}
           className={`star ${i <= rating ? 'filled' : 'empty'}`}
         >
-          ⭐
+          <i className={i <= rating ? "fas fa-star" : "far fa-star"}></i>
         </span>
       );
     }
@@ -155,19 +155,28 @@ const CPProfilesPage = () => {
                   {profile.badges && (
                     <div className="stat-item">
                       <span className="stat-label">Badges</span>
-                      <span className="stat-value">🏅 {profile.badges}</span>
+                      <span className="stat-value">
+                        <i className="fas fa-medal" style={{ color: '#FFA116', marginRight: '5px' }}></i>
+                        {profile.badges}
+                      </span>
                     </div>
                   )}
                   {profile.dailyStreak && (
                     <div className="stat-item">
                       <span className="stat-label">Daily Streak</span>
-                      <span className="stat-value">🔥 {profile.dailyStreak}</span>
+                      <span className="stat-value">
+                        <i className="fas fa-fire" style={{ color: '#FF4D4D', marginRight: '5px' }}></i>
+                        {profile.dailyStreak}
+                      </span>
                     </div>
                   )}
                   {profile.contestRank && (
                     <div className="stat-item">
                       <span className="stat-label">Best Contest Rank</span>
-                      <span className="stat-value">🏆 {profile.contestRank}</span>
+                      <span className="stat-value">
+                        <i className="fas fa-trophy" style={{ color: '#FFD700', marginRight: '5px' }}></i>
+                        {profile.contestRank}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -195,7 +204,7 @@ const CPProfilesPage = () => {
             {journeyStats.map((stat, index) => (
               <div key={index} className="journey-card">
                 <div className="journey-icon" style={{ color: stat.color }}>
-                  <span>{stat.icon}</span>
+                  <i className={stat.icon}></i>
                 </div>
                 <div className="journey-number" style={{ color: stat.color }}>
                   {stat.number}
@@ -217,28 +226,28 @@ const CPProfilesPage = () => {
               </h3>
               <div className="stats-row">
                 <div className="stat-box">
-                  <div className="stat-icon">📈</div>
+                  <div className="stat-icon"><i className="fas fa-chart-line"></i></div>
                   <div className="stat-info">
                     <div className="stat-number">60+</div>
                     <div className="stat-text">Contests Participated</div>
                   </div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-icon">⏱️</div>
+                  <div className="stat-icon"><i className="fas fa-hourglass-half"></i></div>
                   <div className="stat-info">
                     <div className="stat-number">800+</div>
                     <div className="stat-text">Hours of Practice</div>
                   </div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-icon">🧠</div>
+                  <div className="stat-icon"><i className="fas fa-brain"></i></div>
                   <div className="stat-info">
                     <div className="stat-number">50+</div>
                     <div className="stat-text">Algorithm Patterns Mastered</div>
                   </div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-icon">🎯</div>
+                  <div className="stat-icon"><i className="fas fa-bullseye"></i></div>
                   <div className="stat-info">
                     <div className="stat-number">90%</div>
                     <div className="stat-text">Problem Solving Accuracy</div>

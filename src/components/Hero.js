@@ -119,7 +119,7 @@ const Hero = () => {
 
       {/* Footer with social links */}
       <div className="hero-footer">
-        <p>With <span className="heart">❤️</span> by Senthamizh Selvan</p>
+        <p>With <span className="heart" style={{ color: '#ff4d4d' }}><i className="fas fa-heart"></i></span> by Senthamizh Selvan</p>
         <div className="footer-social">
           <a href="https://linkedin.com/in/s-senthamizh-selvan-73709a32a/" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>

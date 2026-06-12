@@ -15,7 +15,7 @@ const AchievementsPage = () => {
       image: "/images/techsprint-gdg.jpg",
       category: "Competitions",
       link: "#",
-      icon: "🎯"
+      icon: "fas fa-bullseye"
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const AchievementsPage = () => {
       image: "/images/all-india-dev.jpg",
       category: "Hackathons",
       link: "#",
-      icon: "🚀"
+      icon: "fas fa-rocket"
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const AchievementsPage = () => {
       image: "/images/technove.jpg",
       category: "Hackathons",
       link: "#",
-      icon: "💻"
+      icon: "fas fa-laptop-code"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const AchievementsPage = () => {
       image: "/images/adobe-quiz.jpg",
       category: "Competitions",
       link: "#",
-      icon: "🎨"
+      icon: "fas fa-palette"
     },
     {
       id: 6,
@@ -59,7 +59,7 @@ const AchievementsPage = () => {
       image: "/images/google-solution.jpg",
       category: "Competitions",
       link: "#",
-      icon: "🌟"
+      icon: "fas fa-star"
     }
   ];
 
@@ -76,7 +76,7 @@ const AchievementsPage = () => {
         streak: "140+ days"
       },
       link: "https://leetcode.com/senthamizhselvan-sm_cse-N",
-      icon: "🟡",
+      icon: "fas fa-code",
       color: "#FFA116"
     },
     {
@@ -91,7 +91,7 @@ const AchievementsPage = () => {
         solved: "400+ problems"
       },
       link: "https://codechef.com/users/selva_cr_007",
-      icon: "🍳",
+      icon: "fas fa-utensils",
       color: "#5B4638"
     },
     {
@@ -105,7 +105,7 @@ const AchievementsPage = () => {
         contests: "Multiple contests"
       },
       link: "https://codeforces.com/profile/senthamizhselvan.s",
-      icon: "⚔️",
+      icon: "fas fa-terminal",
       color: "#1F8ACB"
     },
     {
@@ -118,7 +118,7 @@ const AchievementsPage = () => {
         category: "Programming practice"
       },
       link: "#",
-      icon: "🎪",
+      icon: "fas fa-cubes",
       color: "#FF6B6B"
     }
   ];
@@ -190,7 +190,7 @@ const AchievementsPage = () => {
               <div key={achievement.id} className="achievement-card">
                 <div className="achievement-header">
                   <div className="achievement-icon">
-                    <span className="achievement-emoji">{achievement.icon}</span>
+                    <i className={`${achievement.icon} achievement-fa-icon`} style={{ fontSize: '1.5rem', color: '#8B5FBF' }}></i>
                   </div>
                   <div className="achievement-meta">
                     <h3 className="achievement-title">{achievement.title}</h3>
@@ -233,7 +233,7 @@ const AchievementsPage = () => {
                 <div key={profile.id} className="coding-card">
                   <div className="coding-header">
                     <div className="platform-icon" style={{ color: profile.color }}>
-                      <span className="platform-emoji">{profile.icon}</span>
+                      <i className={`${profile.icon} platform-fa-icon`} style={{ fontSize: '1.8rem' }}></i>
                     </div>
                     <div className="platform-info">
                       <h3 className="platform-name">{profile.platform}</h3>

@@ -8,35 +8,35 @@ const Certifications = () => {
       provider: 'AWS',
       year: 'JUL 2025',
       description: 'Essential knowledge of AWS cloud services, architecture, and best practices for cloud computing.',
-      icon: '☁️'
+      icon: 'fas fa-cloud'
     },
     {
       title: 'Introduction To Internet of things',
       provider: 'NPTEL',
       year: 'OCT 2025',
       description: 'Comprehensive understanding of IoT concepts, devices, connectivity, and applications.',
-      icon: '🌐'
+      icon: 'fas fa-globe'
     },
     {
       title: 'Introduction to Linux',
       provider: 'LinkedIn',
       year: 'MAR 2025',
       description: 'Proficiency in Linux operating systems, command-line interfaces, and system administration.',
-      icon: '🐧'
+      icon: 'fab fa-linux'
     },
     {
       title: 'CCNA : Introduction to Networks',
       provider: 'Cisco',
       year: 'NOV 2025',
       description: 'Foundational networking concepts including TCP/IP, routing, switching, and network protocols.',
-      icon: '🔗'
+      icon: 'fas fa-network-wired'
     },
     {
       title: 'MongoDB Basics',
       provider: 'MongoDB',
       year: 'JUN 2025',
       description: 'Database management with MongoDB, including document-based storage and NoSQL concepts.',
-      icon: '🍃'
+      icon: 'fas fa-leaf'
     },
   ];
 
@@ -61,7 +61,7 @@ const Certifications = () => {
             >
               <div className="certification-header">
                 <div className="certification-icon">
-                  {cert.icon}
+                  <i className={cert.icon}></i>
                 </div>
                 <div className="certification-meta">
                   <div className="certification-provider">{cert.provider}</div>
