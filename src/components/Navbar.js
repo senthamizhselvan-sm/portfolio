@@ -62,7 +62,7 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-left">
           <a href="#hero" className="logo-link">
-            <img src="/images/site logo.png" alt="Logo" className="nav-logo-img" />
+            <img src="/images/new site logo.png" alt="Logo" className="nav-logo-img" />
           </a>
         </div>
 

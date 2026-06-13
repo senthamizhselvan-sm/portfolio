@@ -559,10 +559,111 @@
 @media screen and (max-width: 600px) {
   .analytics-grid {
     grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 1.2rem;
   }
 
+  /* Compact analytics cards */
+  .analytics-card {
+    min-height: 240px;
+    padding: 1.2rem;
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+  }
+
+  .platform-avatar, 
+  .leetcode-logo-wrapper, 
+  .codeforces-logo-wrapper,
+  .codechef-logo-wrapper {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .platform-title h3 {
+    font-size: 1rem;
+  }
+
+  .platform-username {
+    font-size: 0.75rem;
+  }
+
+  .card-content {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .metric-row {
+    font-size: 0.8rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .card-link-footer {
+    font-size: 0.8rem;
+  }
+
+  /* Compact repositories */
   .repos-list-grid {
     grid-template-columns: 1fr; /* 1 column repositories on mobile */
+    gap: 1rem;
+  }
+
+  .repo-card-modern {
+    min-height: auto;
+    padding: 1.2rem;
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+  }
+
+  .repo-name {
+    font-size: 0.95rem;
+  }
+
+  .repo-desc {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Compact activity timeline cards */
+  .activity-timeline {
+    padding-left: 1.2rem;
+    margin-left: 0.2rem;
+    gap: 1.2rem;
+  }
+
+  .timeline-card-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-card-content {
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+  }
+
+  .timeline-title-text {
+    font-size: 0.85rem;
+  }
+
+  .timeline-desc-text {
+    font-size: 0.75rem;
+  }
+
+  /* Compact profile hub quick links */
+  .dashboard-profile-links {
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+    gap: 0.6rem;
+  }
+
+  .profile-hub-link {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 10px;
   }
 
   .dashboard-title {

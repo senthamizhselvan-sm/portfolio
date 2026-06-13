@@ -206,7 +206,10 @@
   }
 
   .skill-category {
-    padding: 1.5rem;
+    width: 84%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1.2rem;
   }
 
   .category-title {
@@ -232,8 +235,18 @@
     gap: 1rem;
   }
 
+  .competency-item {
+    width: 84%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1.2rem;
+  }
+
   .skills-summary {
-    padding: 2rem;
+    width: 84%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1.5rem;
   }
 
   .summary-title {
@@ -255,7 +268,7 @@
   }
 
   .skill-category {
-    padding: 1rem;
+    padding: 1.2rem;
   }
 
   .skills-icons-grid {
@@ -277,6 +290,6 @@
   }
 
   .competency-item {
-    padding: 1rem;
+    padding: 1.2rem;
   }
 }

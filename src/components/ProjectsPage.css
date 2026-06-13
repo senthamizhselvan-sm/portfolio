@@ -249,22 +249,48 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  /* Reduced width on phone view */
+  /* Reduced width on phone view - compact, small and light */
   .project-card {
-    width: 88%;
-    max-width: 420px;
+    width: 84%;
+    max-width: 320px;
     margin: 0 auto;
   }
 
   .project-image {
-    height: 200px;
+    height: 130px;
   }
 
   .project-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .tech-tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .project-git-stats {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    padding-top: 8px;
   }
 }
 
@@ -280,11 +306,12 @@
   .project-links {
     flex-direction: column;
     width: 100%;
+    gap: 0.5rem;
   }
 
   .project-link {
     padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     justify-content: center;
   }
 }

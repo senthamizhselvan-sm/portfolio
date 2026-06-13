@@ -433,24 +433,24 @@
   }
 
   .platform-card {
-    width: 88%;
-    max-width: 350px;
+    width: 84%;
+    max-width: 310px;
     margin: 0 auto;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 
   .journey-stats {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .stats-row {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .journey-title {
@@ -459,6 +459,103 @@
 
   .stats-title {
     font-size: 1.5rem;
+  }
+  
+  .platform-header {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .platform-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.8rem;
+    border-radius: 14px;
+  }
+
+  .platform-icon {
+    font-size: 1.6rem;
+  }
+
+  .platform-name {
+    font-size: 1.25rem;
+  }
+
+  .platform-username {
+    font-size: 0.8rem;
+  }
+
+  .platform-content {
+    padding: 1.2rem;
+  }
+
+  .rank-section {
+    margin-bottom: 1.2rem;
+  }
+
+  .user-rank {
+    font-size: 1.1rem;
+  }
+
+  .global-rank {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stat-item {
+    padding: 0.6rem 0.4rem;
+    border-radius: 12px;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-value {
+    font-size: 0.9rem;
+  }
+
+  .view-profile-btn {
+    padding: 10px 0;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .journey-card {
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 1.2rem;
+  }
+
+  .journey-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .journey-number {
+    font-size: 1.8rem;
+  }
+
+  .journey-label {
+    font-size: 0.85rem;
+  }
+
+  .stat-box {
+    width: 84%;
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+
+  .stat-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -472,23 +569,23 @@
   }
 
   .platform-header {
-    padding: 1.5rem;
+    padding: 1.2rem 1rem;
   }
 
   .platform-content {
-    padding: 1.5rem;
+    padding: 1.2rem 1rem;
   }
 
   .platform-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .journey-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
   .stats-container {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .stat-box {

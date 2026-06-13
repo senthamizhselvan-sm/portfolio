@@ -206,7 +206,10 @@
   }
 
   .experience-content {
-    padding: 1.5rem;
+    width: 84%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1.2rem;
   }
 
   .experience-header-info {
@@ -219,11 +222,25 @@
   }
 
   .experience-role {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .experience-company {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .experience-duration {
+    font-size: 0.85rem;
+  }
+
+  .experience-location {
+    font-size: 0.8rem;
+  }
+
+  .experience-description li {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding-left: 1.2rem;
   }
 }
 
