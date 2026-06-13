@@ -11,10 +11,10 @@ export default function useTilt(maxTilt = 15) {
       const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left; // x coordinate inside the card
       const y = e.clientY - rect.top;  // y coordinate inside the card
-      
+
       const width = rect.width;
       const height = rect.height;
-      
+
       // Calculate rotation based on center of card
       const rotateX = ((y / height) - 0.5) * -maxTilt;
       const rotateY = ((x / width) - 0.5) * maxTilt;

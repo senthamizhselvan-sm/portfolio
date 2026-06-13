@@ -127,15 +127,15 @@ const AchievementsPage = () => {
 
   const filteredAchievements = achievements.filter(achievement => {
     const matchesSearch = achievement.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         achievement.organization.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         achievement.description.toLowerCase().includes(searchTerm.toLowerCase());
+      achievement.organization.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      achievement.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = activeFilter === 'All' || achievement.category === activeFilter;
     return matchesSearch && matchesFilter;
   });
 
   const filteredCodingProfiles = codingProfiles.filter(profile => {
     const matchesSearch = profile.platform.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         profile.username.toLowerCase().includes(searchTerm.toLowerCase());
+      profile.username.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = activeFilter === 'All' || activeFilter === 'Coding Profiles';
     return matchesSearch && matchesFilter;
   });
@@ -169,7 +169,7 @@ const AchievementsPage = () => {
               />
             </div>
           </div>
-          
+
           <div className="filter-tabs">
             {filterOptions.map((filter) => (
               <button
@@ -198,17 +198,17 @@ const AchievementsPage = () => {
                     <div className="achievement-org">{achievement.organization}</div>
                   </div>
                 </div>
-                
+
                 <div className="achievement-image">
                   <img src={achievement.image} alt={achievement.title} />
                 </div>
-                
+
                 <div className="achievement-content">
                   <p className="achievement-description">{achievement.description}</p>
                   {achievement.link !== "#" && (
-                    <a 
-                      href={achievement.link} 
-                      target="_blank" 
+                    <a
+                      href={achievement.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="achievement-link"
                     >
@@ -240,7 +240,7 @@ const AchievementsPage = () => {
                       <p className="username">@{profile.username}</p>
                     </div>
                   </div>
-                  
+
                   <div className="coding-stats">
                     {Object.entries(profile.stats).map(([key, value]) => (
                       <div key={key} className="stat-item">
@@ -249,11 +249,11 @@ const AchievementsPage = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   {profile.link !== "#" && (
-                    <a 
-                      href={profile.link} 
-                      target="_blank" 
+                    <a
+                      href={profile.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="profile-link"
                     >
@@ -268,14 +268,14 @@ const AchievementsPage = () => {
         )}
 
         {/* No Results */}
-        {((showAchievements && filteredAchievements.length === 0) || 
+        {((showAchievements && filteredAchievements.length === 0) ||
           (showCodingProfiles && filteredCodingProfiles.length === 0)) && (
-          <div className="no-results">
-            <i className="fas fa-search"></i>
-            <h3>No results found</h3>
-            <p>Try adjusting your search or filter criteria</p>
-          </div>
-        )}
+            <div className="no-results">
+              <i className="fas fa-search"></i>
+              <h3>No results found</h3>
+              <p>Try adjusting your search or filter criteria</p>
+            </div>
+          )}
       </div>
     </div>
   );

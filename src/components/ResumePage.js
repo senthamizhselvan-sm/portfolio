@@ -15,16 +15,16 @@ const ResumePage = () => {
         </div>
 
         <div className="resume-actions-top">
-          <a 
-            href="/Senthamizhselvan Resume.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="/Senthamizhselvan Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="action-btn open-tab-btn"
           >
             <i className="fas fa-external-link-alt"></i> Open in New Tab
           </a>
-          <a 
-            href="/Senthamizhselvan Resume.pdf" 
+          <a
+            href="/Senthamizhselvan Resume.pdf"
             download="Senthamizhselvan_S_Resume.pdf"
             className="action-btn download-btn"
           >
@@ -33,11 +33,11 @@ const ResumePage = () => {
         </div>
 
         <div className="resume-viewer-container">
-          <iframe 
-            src="/Senthamizhselvan Resume.pdf" 
+          <iframe
+            src="/Senthamizhselvan Resume.pdf"
             title="Senthamizhselvan S Resume"
-            width="100%" 
-            height="850px" 
+            width="100%"
+            height="850px"
             className="resume-iframe"
           />
         </div>

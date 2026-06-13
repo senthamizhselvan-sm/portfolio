@@ -22,8 +22,8 @@ const CommandPalette = ({ isOpen, onClose, onToggleRecruiter, isRecruiterMode })
     { name: 'Open LeetCode Profile', desc: 'Visit leetcode.com/senthamizhselvan-sm_cse-N', action: () => { window.open('https://leetcode.com/senthamizhselvan-sm_cse-N', '_blank'); onClose(); } }
   ];
 
-  const filteredCommands = commands.filter(cmd => 
-    cmd.name.toLowerCase().includes(search.toLowerCase()) || 
+  const filteredCommands = commands.filter(cmd =>
+    cmd.name.toLowerCase().includes(search.toLowerCase()) ||
     cmd.desc.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -115,7 +115,7 @@ const CommandPalette = ({ isOpen, onClose, onToggleRecruiter, isRecruiterMode })
             </div>
           )}
         </div>
-        
+
         <div className="palette-footer">
           <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>Enter</kbd> to select</span>
         </div>

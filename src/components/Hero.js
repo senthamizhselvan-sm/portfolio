@@ -49,7 +49,7 @@ const Hero = () => {
         <p className="section-subtitle">
           Blending logic, creativity, and a growth mindset to build, solve, and inspire.
         </p>
-        
+
         <div className="skills-grid">
           <div className="skill-card">
             <div className="skill-icon">

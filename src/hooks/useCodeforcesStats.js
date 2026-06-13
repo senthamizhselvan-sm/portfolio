@@ -18,13 +18,13 @@ export const useCodeforcesStats = (handle = 'senthamizhselvan.s') => {
           throw new Error(`Codeforces API returned HTTP ${response.status}`);
         }
         const data = await response.json();
-        
+
         if (data.status !== 'OK') {
           throw new Error(data.comment || 'Failed to retrieve user data from Codeforces');
         }
 
         const userInfo = data.result[0];
-        
+
         if (isMounted) {
           setStats({
             rating: userInfo.rating || 0,

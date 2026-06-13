@@ -90,7 +90,7 @@ const SkillsPage = () => {
             <span className="gradient-text">Technical Expertise</span>
           </h1>
           <p className="skills-subtitle">
-            A comprehensive toolkit of programming languages, frameworks, and technologies that I 
+            A comprehensive toolkit of programming languages, frameworks, and technologies that I
             have mastered throughout my journey.
           </p>
         </div>

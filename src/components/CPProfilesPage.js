@@ -143,7 +143,7 @@ const CPProfilesPage = () => {
                 <h2 className="platform-name">{profile.platform}</h2>
                 <p className="platform-username">@{profile.username}</p>
               </div>
-              
+
               <div className="platform-content">
                 <div className="rank-section">
                   <h3 className="user-rank">{profile.rank}</h3>
@@ -152,7 +152,7 @@ const CPProfilesPage = () => {
                     {renderStars(profile.rating, profile.maxStars)}
                   </div>
                 </div>
-                
+
                 <div className="stats-grid">
                   <div className="stat-item">
                     <span className="stat-label">Problems Solved</span>
@@ -199,10 +199,10 @@ const CPProfilesPage = () => {
                     </div>
                   )}
                 </div>
-                
-                <a 
-                  href={profile.profileLink} 
-                  target="_blank" 
+
+                <a
+                  href={profile.profileLink}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="view-profile-btn"
                 >
@@ -218,7 +218,7 @@ const CPProfilesPage = () => {
           <h2 className="journey-title">
             <span className="gradient-text">My CP Journey</span>
           </h2>
-          
+
           <div className="journey-stats">
             {journeyStats.map((stat, index) => (
               <div key={index} className="journey-card">

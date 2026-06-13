@@ -323,12 +323,29 @@
 }
 
 /* Category Accent Border Colors */
-.concept-card-modern.dsa::before { background: #8B5FBF; }
-.concept-card-modern.paradigms::before { background: #4A90E2; }
-.concept-card-modern.data::before { background: #10B981; }
-.concept-card-modern.systems::before { background: #F59E0B; }
-.concept-card-modern.development::before { background: #EC4899; }
-.concept-card-modern.ai::before { background: #3B82F6; }
+.concept-card-modern.dsa::before {
+  background: #8B5FBF;
+}
+
+.concept-card-modern.paradigms::before {
+  background: #4A90E2;
+}
+
+.concept-card-modern.data::before {
+  background: #10B981;
+}
+
+.concept-card-modern.systems::before {
+  background: #F59E0B;
+}
+
+.concept-card-modern.development::before {
+  background: #EC4899;
+}
+
+.concept-card-modern.ai::before {
+  background: #3B82F6;
+}
 
 .concept-card-modern:hover {
   transform: translateY(-4px);
@@ -560,8 +577,15 @@
 
 /* Animations */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -569,53 +593,53 @@
   .education-page {
     padding: 4rem 0;
   }
-  
+
   .education-title {
     font-size: 2.5rem;
   }
-  
+
   .education-card {
     padding: 1.5rem;
   }
-  
+
   .education-header-card {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .education-icon {
     align-self: center;
   }
-  
+
   .education-controls {
     gap: 1.5rem;
   }
-  
+
   .filter-tabs {
     gap: 0.8rem;
   }
-  
+
   .filter-tab {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
   }
-  
+
   .certifications-grid,
   .courses-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .certification-card,
   .course-card {
     padding: 1.5rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .concepts-grid-modern {
     grid-template-columns: 1fr;
   }
@@ -625,30 +649,30 @@
   .education-title {
     font-size: 2rem;
   }
-  
+
   .education-subtitle {
     font-size: 1rem;
   }
-  
+
   .education-card {
     padding: 1rem;
   }
-  
+
   .cert-header {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .cert-icon {
     align-self: center;
   }
-  
+
   .filter-tabs {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .filter-tab {
     width: 100%;
   }

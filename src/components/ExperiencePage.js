@@ -20,7 +20,7 @@ const ExperiencePage = () => {
     {
       role: "Java Full Stack Intern",
       company: "AICTE",
-      location: "India", 
+      location: "India",
       duration: "Jun 2025 - Jul 2025",
       description: [
         "Completed a Java Full Stack Internship, gaining hands-on experience in Java, Spring Boot, and related frameworks",
@@ -41,7 +41,7 @@ const ExperiencePage = () => {
             <span className="gradient-text">Professional Experience</span>
           </h1>
           <p className="experience-subtitle">
-            I have had the opportunity to work with some amazing companies and teams, where I have 
+            I have had the opportunity to work with some amazing companies and teams, where I have
             gained valuable experience and skills. Here are some of my key experiences:
           </p>
         </div>
@@ -52,7 +52,7 @@ const ExperiencePage = () => {
               <div className="experience-icon">
                 <i className={experience.icon}></i>
               </div>
-              
+
               <div className="experience-content">
                 <div className="experience-header-info">
                   <div className="experience-title-section">
@@ -64,7 +64,7 @@ const ExperiencePage = () => {
                     <p className="experience-location">{experience.location}</p>
                   </div>
                 </div>
-                
+
                 <div className="experience-description">
                   <ul>
                     {experience.description.map((desc, descIndex) => (

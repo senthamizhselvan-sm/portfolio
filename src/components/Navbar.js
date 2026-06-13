@@ -65,9 +65,9 @@ const Navbar = () => {
             <img src="/images/site logo.png" alt="Logo" className="nav-logo-img" />
           </a>
         </div>
-        
+
         {/* Hamburger Menu Button - Only visible on mobile */}
-        <button 
+        <button
           className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
@@ -81,9 +81,9 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className={`nav-links ${isMenuOpen ? 'nav-links-mobile' : ''}`}>
           {navLinks.map((link, index) => (
-            <a 
+            <a
               key={index}
-              href={link.href} 
+              href={link.href}
               onClick={closeMenu}
               className="nav-link"
             >

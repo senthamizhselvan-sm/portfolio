@@ -170,8 +170,15 @@
 
 /* Animation */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -179,42 +186,42 @@
   .experience-page {
     padding: 4rem 0;
   }
-  
+
   .experience-title {
     font-size: 2.5rem;
   }
-  
+
   .experience-timeline::before {
     left: 20px;
   }
-  
+
   .experience-item {
     gap: 1rem;
   }
-  
+
   .experience-icon {
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
   }
-  
+
   .experience-content {
     padding: 1.5rem;
   }
-  
+
   .experience-header-info {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .experience-meta {
     text-align: left;
   }
-  
+
   .experience-role {
     font-size: 1.1rem;
   }
-  
+
   .experience-company {
     font-size: 1rem;
   }
@@ -224,24 +231,24 @@
   .experience-title {
     font-size: 2rem;
   }
-  
+
   .experience-subtitle {
     font-size: 1rem;
   }
-  
+
   .experience-timeline::before {
     display: none;
   }
-  
+
   .experience-item {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .experience-icon {
     align-self: center;
   }
-  
+
   .experience-content:hover {
     transform: none;
   }

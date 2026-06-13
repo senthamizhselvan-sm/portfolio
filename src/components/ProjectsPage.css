@@ -226,8 +226,15 @@
 
 /* Animation */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -235,27 +242,27 @@
   .projects-page {
     padding: 4rem 0;
   }
-  
+
   .projects-title {
     font-size: 2.5rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   /* Reduced width on phone view */
   .project-card {
     width: 88%;
     max-width: 420px;
     margin: 0 auto;
   }
-  
+
   .project-image {
     height: 200px;
   }
-  
+
   .project-content {
     padding: 1.5rem;
   }
@@ -265,16 +272,16 @@
   .projects-title {
     font-size: 2rem;
   }
-  
+
   .projects-subtitle {
     font-size: 1rem;
   }
-  
+
   .project-links {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .project-link {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;

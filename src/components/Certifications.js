@@ -54,9 +54,9 @@ const Certifications = () => {
 
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
-            <div 
-              key={index} 
-              className="certification-card" 
+            <div
+              key={index}
+              className="certification-card"
               data-provider={cert.provider}
             >
               <div className="certification-header">
@@ -68,7 +68,7 @@ const Certifications = () => {
                   <div className="certification-year">{cert.year}</div>
                 </div>
               </div>
-              
+
               <div className="certification-content">
                 <h3>{cert.title}</h3>
                 <p className="certification-description">{cert.description}</p>

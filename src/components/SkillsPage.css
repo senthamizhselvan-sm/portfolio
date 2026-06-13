@@ -179,8 +179,15 @@
 
 /* Animations */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -188,47 +195,47 @@
   .skills-page {
     padding: 4rem 0;
   }
-  
+
   .skills-title {
     font-size: 2.5rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .skill-category {
     padding: 1.5rem;
   }
-  
+
   .category-title {
     font-size: 1.2rem;
   }
-  
+
   .skills-icons-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
   }
-  
+
   .skill-card {
     padding: 1.2rem 0.8rem;
   }
-  
+
   .skill-logo {
     width: 40px;
     height: 40px;
   }
-  
+
   .competencies-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .skills-summary {
     padding: 2rem;
   }
-  
+
   .summary-title {
     font-size: 1.8rem;
   }
@@ -238,37 +245,37 @@
   .skills-title {
     font-size: 2rem;
   }
-  
+
   .skills-subtitle {
     font-size: 1rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skill-category {
     padding: 1rem;
   }
-  
+
   .skills-icons-grid {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 0.8rem;
   }
-  
+
   .skill-card {
     padding: 1rem 0.6rem;
   }
-  
+
   .skill-logo {
     width: 35px;
     height: 35px;
   }
-  
+
   .skill-card .skill-name {
     font-size: 0.8rem;
   }
-  
+
   .competency-item {
     padding: 1rem;
   }

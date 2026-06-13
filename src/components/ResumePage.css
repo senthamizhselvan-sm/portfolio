@@ -108,11 +108,14 @@
 
 /* Animations */
 @keyframes gradientShift {
-  0%, 100% {
+
+  0%,
+  100% {
     background: linear-gradient(45deg, #8B5FBF, #4A90E2, #7B68EE);
     -webkit-background-clip: text;
     background-clip: text;
   }
+
   50% {
     background: linear-gradient(45deg, #7B68EE, #8B5FBF, #4A90E2);
     -webkit-background-clip: text;
@@ -125,11 +128,11 @@
   .resume-title {
     font-size: 2.5rem;
   }
-  
+
   .resume-container {
     padding: 0 1.5rem;
   }
-  
+
   .resume-iframe {
     height: 600px;
   }
@@ -145,11 +148,11 @@
   .resume-container {
     padding: 0 1rem;
   }
-  
+
   .resume-title {
     font-size: 2rem;
   }
-  
+
   .resume-subtitle {
     font-size: 1rem;
   }

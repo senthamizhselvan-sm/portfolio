@@ -389,8 +389,15 @@
 
 /* Animations */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -398,42 +405,42 @@
   .achievements-page {
     padding: 4rem 0;
   }
-  
+
   .achievements-title {
     font-size: 2.5rem;
   }
-  
+
   .achievements-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .achievement-card {
     padding: 1.5rem;
   }
-  
+
   .achievements-controls {
     gap: 1.5rem;
   }
-  
+
   .filter-tabs {
     gap: 0.8rem;
   }
-  
+
   .filter-tab {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
   }
-  
+
   .coding-profiles-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .coding-card {
     padding: 1.5rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
@@ -443,40 +450,40 @@
   .achievements-title {
     font-size: 2rem;
   }
-  
+
   .achievements-subtitle {
     font-size: 1rem;
   }
-  
+
   .achievement-card {
     padding: 1rem;
   }
-  
+
   .achievement-header {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .achievement-icon {
     align-self: center;
   }
-  
+
   .filter-tabs {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .filter-tab {
     width: 100%;
   }
-  
+
   .coding-header {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .platform-icon {
     align-self: center;
   }

@@ -24,12 +24,12 @@ function App() {
 
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange(); // Set initial page
-    
+
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   const renderCurrentPage = () => {
-    switch(currentPage) {
+    switch (currentPage) {
       case 'home':
       case 'hero':
         return <Hero />;

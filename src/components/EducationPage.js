@@ -98,22 +98,22 @@ const EducationPage = () => {
 
   const filteredEducation = education.filter(item => {
     const matchesSearch = item.degree.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.institution.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
+      item.institution.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = activeFilter === 'All' || item.category === activeFilter;
     return matchesSearch && matchesFilter;
   });
 
   const filteredCertifications = certifications.filter(cert => {
     const matchesSearch = cert.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         cert.issuer.toLowerCase().includes(searchTerm.toLowerCase());
+      cert.issuer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = activeFilter === 'All' || cert.category === activeFilter;
     return matchesSearch && matchesFilter;
   });
 
   const filteredCourses = courses.filter(course => {
     const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         course.description.toLowerCase().includes(searchTerm.toLowerCase());
+      course.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = activeFilter === 'All' || course.category === activeFilter;
     return matchesSearch && matchesFilter;
   });
@@ -144,7 +144,7 @@ const EducationPage = () => {
               />
             </div>
           </div>
-          
+
           <div className="filter-tabs">
             {filterOptions.map((filter) => (
               <button
@@ -180,10 +180,10 @@ const EducationPage = () => {
                       <div className="education-cgpa">CGPA: {edu.cgpa}</div>
                     </div>
                   </div>
-                  
+
                   <div className="education-content">
                     <p className="education-description">{edu.description}</p>
-                    
+
                     <div className="education-details">
                       <div className="detail-section">
                         <h5>Key Highlights</h5>
@@ -193,7 +193,7 @@ const EducationPage = () => {
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div className="detail-section core-concepts-section">
                         <h5>Core Concepts</h5>
                         <div className="concepts-grid-modern">
@@ -237,7 +237,7 @@ const EducationPage = () => {
                       <div className="cert-date">{cert.date}</div>
                     </div>
                   </div>
-                  
+
                   <div className="cert-content">
                     <p className="cert-description">{cert.description}</p>
                     <div className="cert-skills">

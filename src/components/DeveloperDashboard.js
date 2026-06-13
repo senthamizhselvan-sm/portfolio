@@ -80,11 +80,6 @@ const DeveloperDashboard = () => {
       desc: 'Engineered interfaces using Django, Bootstrap, and worked with SQL databases.'
     },
     {
-      year: '2025',
-      title: 'Earned AWS Cloud Practitioner Certification',
-      desc: 'Validated cloud skills covering architecture, services, security, and pricing models.'
-    },
-    {
       year: '2024',
       title: 'Google Developer Groups Finalist',
       desc: 'Recognized in Campus Solution Challenge for pricing violation check software.'
@@ -94,7 +89,7 @@ const DeveloperDashboard = () => {
   return (
     <div className="developer-dashboard fade-in" id="dashboard">
       <div className="dashboard-container">
-        
+
         {/* Top Section */}
         <div className="dashboard-header-section">
           <h1 className="dashboard-title">
@@ -107,7 +102,7 @@ const DeveloperDashboard = () => {
 
         {/* Middle Section: Responsive 4-card analytics grid */}
         <div className="analytics-grid">
-          
+
           {/* GitHub Card */}
           {githubLoading ? (
             <StatSkeleton platformName="GitHub" />
@@ -296,7 +291,7 @@ const DeveloperDashboard = () => {
 
         {/* Bottom Section: Timeline & Repos */}
         <div className="dashboard-bottom-section">
-          
+
           {/* GitHub Live Repositories */}
           <div className="repos-container">
             <h2 className="section-heading">

@@ -406,8 +406,15 @@
 
 /* Animations */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -415,41 +422,41 @@
   .cp-profiles-page {
     padding: 4rem 0;
   }
-  
+
   .cp-title {
     font-size: 2.5rem;
   }
-  
+
   .platforms-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .platform-card {
     width: 88%;
     max-width: 350px;
     margin: 0 auto;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .journey-stats {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .stats-row {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .journey-title {
     font-size: 2rem;
   }
-  
+
   .stats-title {
     font-size: 1.5rem;
   }
@@ -459,37 +466,37 @@
   .cp-title {
     font-size: 2rem;
   }
-  
+
   .cp-subtitle {
     font-size: 1rem;
   }
-  
+
   .platform-header {
     padding: 1.5rem;
   }
-  
+
   .platform-content {
     padding: 1.5rem;
   }
-  
+
   .platform-name {
     font-size: 1.5rem;
   }
-  
+
   .journey-card {
     padding: 1.5rem;
   }
-  
+
   .stats-container {
     padding: 2rem;
   }
-  
+
   .stat-box {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
   }
-  
+
   .stat-info {
     text-align: center;
   }

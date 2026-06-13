@@ -16,7 +16,7 @@ const ProjectsPage = () => {
       gradient: "linear-gradient(135deg, #0f172a, #334155)"
     },
     {
-      title: "SILENT SOS", 
+      title: "SILENT SOS",
       subtitle: "Smart Instant Life Emergency Notification & Tracking System",
       description: "A mobile-friendly app that disguises itself as a normal news feed interface but secretly triggers SOS alerts. It includes specialized safety features such as Child Help, Fire Rescue, Fall Detection, and Medical Emergency assistance.",
       image: "/images/silent-sos.png",
@@ -116,12 +116,12 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="project-content">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-subtitle">{project.subtitle}</p>
                   <p className="project-description">{project.description}</p>
-                  
+
                   <div className="project-technologies">
                     {project.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="tech-tag">{tech}</span>
